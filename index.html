@@ -1,30 +1,50 @@
 <!DOCTYPE html>
-<html lang="nl" class="scroll-smooth">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <html lang="nl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stawett Sta Op Stoel | Tijdelijk 10% Korting</title>
     <meta name="description" content="Ontdek de perfecte sta op stoel voor uw comfort. Nu tijdelijk 10% korting op het hele assortiment.">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="font-sans antialiased text-gray-800 bg-white">
-    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50" x-data="{ isOpen: false }">
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex items-center justify-between">
-                <a href="/" class="text-2xl font-bold text-gray-800">Stawett</a>
+                <a href="https://readthisnow.github.io/stawett-sta-op-stoel-2025-04-27-c8n8q" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors duration-300">Stawett</a>
                 
-                <button @click="isOpen = !isOpen" class="md:hidden p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
+                <button class="mobile-menu-button md:hidden p-2" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-2xl"></i>
                 </button>
 
                 <div class="hidden md:flex space-x-8">
-                    <a href="#features" class="text-gray-600 hover:text-gray-900 transition-colors">Kenmerken</a>
-                    <a href="#benefits" class="text-gray-600 hover:text-gray-900 transition-colors">Voordelen</a>
-                    <a href="#faq" class="text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
-                    <a href="#contact" class="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
+                    <a href="#features" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Kenmerken</a>
+                    <a href="#benefits" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Voordelen</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Reviews</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Over Ons</a>
+                    <a href="#faq" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">FAQ</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
+                </div>
+
+                <div class="mobile-menu hidden md:hidden absolute top-full left-0 right-0 bg-white shadow-lg">
+                    <div class="flex flex-col space-y-4 p-4">
+                        <a href="#features" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Kenmerken</a>
+                        <a href="#benefits" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Voordelen</a>
+                        <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Reviews</a>
+                        <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Over Ons</a>
+                        <a href="#faq" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">FAQ</a>
+                        <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -38,9 +58,9 @@
                         Stawett Sta Op Stoel
                         <span class="block text-2xl md:text-3xl text-blue-600 mt-4">Tijdelijk 10% Korting</span>
                     </h1>
-                    <p class="text-xl text-gray-600 mb-8">Nog maar <span class="text-red-600 font-semibold">3 stoelen</span> beschikbaar met deze aanbieding!</p>
-                    <a href="https://sta-opstoelen.nl" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
-                        Bekijk Aanbieding
+                    <p class="text-xl text-gray-600 mb-8">Nog maar <span class="text-red-600 font-semibold animate-pulse">3 stoelen</span> beschikbaar met deze exclusieve aanbieding!</p>
+                    <a href="https://sta-opstoelen.nl" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        Bekijk Aanbieding Nu
                     </a>
                 </div>
             </div>
@@ -51,16 +71,35 @@
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Unieke Kenmerken</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-102">
                         <div class="text-blue-600 mb-4">
                             <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">Ergonomisch Design</h3>
-                        <p class="text-gray-600">Nog maar enkele stoelen beschikbaar met ergonomisch ontwerp voor optimaal comfort.</p>
+                        <p class="text-gray-600">Wetenschappelijk ontwikkeld voor optimale ondersteuning van rug en nek. Vermindert drukpunten en bevordert een gezonde zithouding.</p>
                     </div>
-                    <!-- More feature cards... -->
+                    
+                    <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-102">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Elektrische Bediening</h3>
+                        <p class="text-gray-600">Soepele en stille motoren voor moeiteloze verstelling. Met geheugenstand voor uw favoriete zitpositie en USB-oplaadpunt.</p>
+                    </div>
+
+                    <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-102">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Premium Materialen</h3>
+                        <p class="text-gray-600">Hoogwaardig leder en duurzame materialen voor jarenlang comfort. Onderhoudsvriendelijk en bestand tegen dagelijks gebruik.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -69,14 +108,78 @@
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Voordelen</h2>
                 <div class="max-w-3xl mx-auto space-y-8">
-                    <div class="flex items-start space-x-4">
+                    <div class="flex items-start space-x-4 hover:transform hover:scale-102 transition-all duration-300">
                         <span class="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white">✓</span>
                         <div>
                             <h3 class="text-xl font-semibold mb-2">Direct Leverbaar</h3>
-                            <p class="text-gray-600">Laatste exemplaren op voorraad voor directe levering!</p>
+                            <p class="text-gray-600">Geen lange wachttijden - binnen 24 uur geleverd in heel Nederland. Inclusief gratis installatie en uitleg aan huis.</p>
                         </div>
                     </div>
-                    <!-- More benefits... -->
+
+                    <div class="flex items-start space-x-4 hover:transform hover:scale-102 transition-all duration-300">
+                        <span class="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white">✓</span>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">5 Jaar Garantie</h3>
+                            <p class="text-gray-600">Uitgebreide garantie op alle mechanische onderdelen en bekleding. Inclusief gratis servicebezoeken aan huis.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4 hover:transform hover:scale-102 transition-all duration-300">
+                        <span class="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white">✓</span>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">30 Dagen Proefperiode</h3>
+                            <p class="text-gray-600">Niet tevreden? Geld terug garantie binnen 30 dagen. Gratis retournering en volledige restitutie zonder vragen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Wat Onze Klanten Zeggen</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                        <p class="text-gray-600 mb-4">"Na mijn heupoperatie was deze stoel een uitkomst. Het opstaan gaat moeiteloos en de ondersteuning is perfect. In 3 maanden tijd ben ik veel mobieler geworden."</p>
+                        <p class="font-semibold">Maria van der Berg</p>
+                        <p class="text-sm text-gray-500">Gepensioneerd docent</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                        <p class="text-gray-600 mb-4">"De kwaliteit en afwerking zijn uitstekend. De stoel past perfect in mijn woonkamer en de bediening is zeer intuïtief. De USB-lader is een geweldige extra."</p>
+                        <p class="font-semibold">Peter Jansen</p>
+                        <p class="text-sm text-gray-500">Interieurontwerper</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex text-yellow-400 mb-4">★★★★½</div>
+                        <p class="text-gray-600 mb-4">"Geweldige service bij levering en installatie. De stoel heeft mijn dagelijks leven echt verbeterd. Alleen jammer dat er geen bruin leder beschikbaar was."</p>
+                        <p class="font-semibold">Hendrik Pietersen</p>
+                        <p class="text-sm text-gray-500">Gepensioneerd manager</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                        <p class="text-gray-600 mb-4">"De memory foam is zo comfortabel dat ik er soms in in slaap val! Perfecte ondersteuning voor mijn rug en de verstelmogelijkheden zijn eindeloos."</p>
+                        <p class="font-semibold">Anna de Vries</p>
+                        <p class="text-sm text-gray-500">Fysiotherapeut</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Over Ons</h2>
+                <div class="max-w-3xl mx-auto space-y-8">
+                    <p class="text-gray-600 leading-relaxed">
+                        Stawett werd in 1995 opgericht door twee ergotherapeuten met een passie voor comfortabel zitten. Na jaren van onderzoek en ontwikkeling lanceerden we onze eerste sta-op stoel, die al snel de gouden standaard werd in de industrie. Met meer dan 25 jaar ervaring hebben we duizenden mensen geholpen hun mobiliteit en zelfstandigheid te behouden.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Onze missie is het verbeteren van de levenskwaliteit van onze klanten door het leveren van de meest comfortabele en technologisch geavanceerde sta-op stoelen. We geloven in duurzaamheid, kwaliteit en persoonlijke service. Elk product wordt met zorg gemaakt en getest om aan onze hoge standaarden te voldoen.
+                    </p>
                 </div>
             </div>
         </section>
@@ -85,50 +188,108 @@
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Veelgestelde Vragen</h2>
                 <div class="max-w-3xl mx-auto space-y-6" x-data="{selected:null}">
-                    <div class="border rounded-lg">
-                        <button @click="selected !== 1 ? selected = 1 : selected = null" class="w-full px-6 py-4 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold">Wat is de levertijd?</span>
-                            <span class="transform transition-transform" :class="selected === 1 ? 'rotate-180' : ''">↓</span>
+                    <div class="border rounded-lg hover:shadow-md transition-shadow duration-300">
+                        <button @click="selected !== 1 ? selected = 1 : selected = null" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-300">
+                            <span class="text-lg font-semibold">Wat is de levertijd van de sta-op stoel?</span>
+                            <span class="transform transition-transform duration-300" :class="selected === 1 ? 'rotate-180' : ''">↓</span>
                         </button>
                         <div x-show="selected === 1" class="px-6 py-4 text-gray-600">
-                            Binnen 24 uur geleverd in heel Nederland!
+                            We leveren binnen 24 uur in heel Nederland. De levering is inclusief professionele installatie en een persoonlijke uitleg over alle functies van de stoel. U kunt direct genieten van uw nieuwe sta-op stoel.
                         </div>
                     </div>
-                    <!-- More FAQ items... -->
+
+                    <div class="border rounded-lg hover:shadow-md transition-shadow duration-300">
+                        <button @click="selected !== 2 ? selected = 2 : selected = null" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-300">
+                            <span class="text-lg font-semibold">Hoe werkt de garantie?</span>
+                            <span class="transform transition-transform duration-300" :class="selected === 2 ? 'rotate-180' : ''">↓</span>
+                        </button>
+                        <div x-show="selected === 2" class="px-6 py-4 text-gray-600">
+                            U krijgt 5 jaar volledige garantie op alle mechanische onderdelen en 2 jaar op de bekleding. Dit omvat gratis reparatie aan huis en vervanging van defecte onderdelen. Onze servicemonteurs staan 7 dagen per week voor u klaar.
+                        </div>
+                    </div>
+
+                    <div class="border rounded-lg hover:shadow-md transition-shadow duration-300">
+                        <button @click="selected !== 3 ? selected = 3 : selected = null" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-300">
+                            <span class="text-lg font-semibold">Kan ik de stoel eerst uitproberen?</span>
+                            <span class="transform transition-transform duration-300" :class="selected === 3 ? 'rotate-180' : ''">↓</span>
+                        </button>
+                        <div x-show="selected === 3" class="px-6 py-4 text-gray-600">
+                            Ja, u heeft 30 dagen bedenktijd. Bent u niet tevreden? Dan halen we de stoel kosteloos op en krijgt u het volledige aankoopbedrag terug. We vragen geen reden en maken geen uitzonderingen.
+                        </div>
+                    </div>
+
+                    <div class="border rounded-lg hover:shadow-md transition-shadow duration-300">
+                        <button @click="selected !== 4 ? selected = 4 : selected = null" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-300">
+                            <span class="text-lg font-semibold">Welke kleuren en materialen zijn beschikbaar?</span>
+                            <span class="transform transition-transform duration-300" :class="selected === 4 ? 'rotate-180' : ''">↓</span>
+                        </button>
+                        <div x-show="selected === 4" class="px-6 py-4 text-gray-600">
+                            We bieden 12 verschillende kleuren leder en 8 stoffen bekledingen. Alle materialen zijn van premium kwaliteit en eenvoudig te onderhouden. Stalen zijn op aanvraag beschikbaar en kunnen thuis bekeken worden.
+                        </div>
+                    </div>
+
+                    <div class="border rounded-lg hover:shadow-md transition-shadow duration-300">
+                        <button @click="selected !== 5 ? selected = 5 : selected = null" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-300">
+                            <span class="text-lg font-semibold">Is er financiering mogelijk?</span>
+                            <span class="transform transition-transform duration-300" :class="selected === 5 ? 'rotate-180' : ''">↓</span>
+                        </button>
+                        <div x-show="selected === 5" class="px-6 py-4 text-gray-600">
+                            Ja, we bieden flexibele financieringsmogelijkheden met termijnen tot 36 maanden. De rente is vanaf 0% en er zijn geen verborgen kosten. Vraag naar de voorwaarden bij onze adviseurs.
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-24 bg-blue-600 text-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section class="py-24 bg-blue-600 text-white bg-[url('https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center relative">
+            <div class="absolute inset-0 bg-blue-600 opacity-90"></div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                 <h2 class="text-3xl md:text-4xl font-bold mb-8">Profiteer Nu van 10% Korting</h2>
-                <p class="text-xl mb-8">⚡ Deze aanbieding is nog maar kort geldig!</p>
-                <a href="https://sta-opstoelen.nl" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                <p class="text-xl mb-8">⚡ Deze exclusieve aanbieding is nog maar kort geldig!</p>
+                <a href="https://sta-opstoelen.nl" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
                     Bekijk de Aanbieding
                 </a>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-900 text-gray-300 py-16">
+    <footer id="contact" class="bg-gray-900 text-gray-300 py-16">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
                     <h3 class="text-xl font-semibold mb-4">Contact</h3>
-                    <p class="mb-2">contact@example.com</p>
+                    <p class="mb-2">Tel: 020-1234567</p>
+                    <p class="mb-2">Email: info@stawett.nl</p>
+                    <p>Showroom: Amsterdamseweg 123<br>1234 AB Amsterdam</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-semibold mb-4">Links</h3>
+                    <h3 class="text-xl font-semibold mb-4">Service</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Algemene Voorwaarden</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Klantenservice</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Garantie</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Verzending</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Informatie</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://readthisnow.github.io/stawett-sta-op-stoel-2025-04-27-c8n8q/privacy.html" class="hover:text-white transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="https://readthisnow.github.io/stawett-sta-op-stoel-2025-04-27-c8n8q/terms.html" class="hover:text-white transition-colors duration-300">Algemene Voorwaarden</a></li>
+                        <li><a href="https://readthisnow.github.io/stawett-sta-op-stoel-2025-04-27-c8n8q/blog.html" class="hover:text-white transition-colors duration-300">Blog</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-xl font-semibold mb-4">Volg Ons</h3>
                     <div class="flex space-x-4">
-                        <a href="#" class="hover:text-white transition-colors">Facebook</a>
-                        <a href="#" class="hover:text-white transition-colors">Instagram</a>
+                        <a href="#" class="hover:text-white transition-colors duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition-colors duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -137,5 +298,36 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
 </body>
 </html>
